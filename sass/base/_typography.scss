@@ -10,16 +10,21 @@ body {
   color: $color-white;
   text-transform: uppercase;
   backface-visibility: hidden;
-  font-size: 6rem;
-  margin-bottom: 1rem;
+  font-size: 9rem;
+  text-align: center;
+  font-family: 'Fjalla One';
+  line-height: 0.9;
+  letter-spacing: 10px;
 }
 
 .heading-secondary {
-  font-size: 2.9rem;
+  font-family: 'Nanum Brush Script';
+  font-size: 4.2rem;
   text-transform: uppercase;
   font-weight: 700;
   color: $color-white;
   background-clip: text;
   -webkit-background-clip: text;
   letter-spacing: 2px;
+  text-align: center;
 }
