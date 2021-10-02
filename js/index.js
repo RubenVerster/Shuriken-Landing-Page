@@ -69,3 +69,16 @@ const renderShuriken = () => {
 };
 
 container.addEventListener('click', () => renderShuriken());
+
+const cleanupWeapons = () => {
+  let mess = document.getElementsByClassName('throw-shuriken');
+  if (mess.length < 5) {
+    return;
+  } else {
+    mess[0].remove();
+  }
+};
+
+setInterval(() => {
+  cleanupWeapons();
+}, 1500);
