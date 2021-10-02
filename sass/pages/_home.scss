@@ -22,4 +22,31 @@
     width: 200px;
     position: absolute;
   }
+
+  .copy {
+    height: 1.5rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    background-color: $color-grey-dark-2;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    a {
+      text-decoration: none;
+      color: $color-primary;
+      transition: all 0.5s ease;
+      margin-right: 1rem;
+      &:hover {
+        color: $color-white;
+      }
+    }
+    p {
+      color: $color-white;
+    }
+  }
 }
