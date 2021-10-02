@@ -88,7 +88,7 @@
         let decider = Math.floor(Math.random() * 2);
 
         shuriken = document.createElement('img');
-        shuriken.src = `../img/${kunaiOrShuriken(decider)}-picture.png`;
+        shuriken.src = `./img/${kunaiOrShuriken(decider)}-picture.png`;
         shuriken.className = 'throw-shuriken';
         shuriken.style.top = `${renderRandHeight()}px`;
         shuriken.style.animation = 'throw-shuriken forwards 0.9s';
