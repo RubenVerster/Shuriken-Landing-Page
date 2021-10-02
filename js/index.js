@@ -1,6 +1,6 @@
 let container = document.querySelector('.container');
-let containerWidth = container.clientWidth;
-let containerHeight = container.clientHeight;
+let windowWidth = window.innerWidth;
+let windowHeight = window.innerHeight;
 
 //creates a style attribute for the element and adds the animation to it
 const keyFrames = document.createElement('style');
@@ -14,17 +14,17 @@ keyFrames.innerHTML = `
 
   50% {
     transform:  rotate(385deg);
-    left: ${containerWidth - 150}px;
+    left: ${windowWidth - 150}px;
     opacity: 1;
   }
   80% {
     transform: rotate(385deg);
-    left: ${containerWidth - 150}px;
+    left: ${windowWidth - 150}px;
     opacity: 1;
   }
   100% {
     transform: rotate(385deg);
-    left: ${containerWidth - 150}px;
+    left: ${windowWidth - 150}px;
     opacity: 0;
     display: none
   }
@@ -42,7 +42,7 @@ const renderRandHeight = () => {
     randCushion += 0.1;
   }
 
-  return (randCushion * containerHeight).toFixed(0);
+  return (randCushion * windowHeight).toFixed(0);
 };
 
 //handles if we're throwing a shurikwn or kunai
@@ -63,8 +63,7 @@ const renderShuriken = () => {
   shuriken.src = `../img/${kunaiOrShuriken(decider)}-picture.png`;
   shuriken.className = 'throw-shuriken';
   shuriken.style.top = `${renderRandHeight()}px`;
-  shuriken.style.left = `${0 - containerWidth}px`;
-  shuriken.style.animation = 'throw-shuriken linear 0.9s';
+  shuriken.style.animation = 'throw-shuriken forwards 0.9s';
   container.appendChild(shuriken);
 };
 
