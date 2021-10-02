@@ -37,8 +37,7 @@ body {
   width: 100vw; }
 
 ::selection {
-  background-color: #3d1472;
-  color: #fff; }
+  background-color: transparent; }
 
 body {
   font-family: 'Lato', sans-serif;
@@ -56,6 +55,9 @@ body {
   font-family: 'Fjalla One';
   line-height: 0.9;
   letter-spacing: 10px; }
+  @media only screen and (max-width: 37.5em) {
+    .heading-primary {
+      font-size: 5rem; } }
 
 .heading-secondary {
   font-family: 'Nanum Brush Script';
@@ -67,6 +69,9 @@ body {
   -webkit-background-clip: text;
   letter-spacing: 2px;
   text-align: center; }
+  @media only screen and (max-width: 37.5em) {
+    .heading-secondary {
+      font-size: 2.7rem; } }
 
 .container {
   height: 100%;
@@ -74,7 +79,17 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; }
-  .container img {
+  align-items: center;
+  position: relative;
+  overflow: hidden; }
+  .container .ninja {
     height: 420px;
     width: 420px; }
+    @media only screen and (max-width: 37.5em) {
+      .container .ninja {
+        height: 250px;
+        width: 250px; } }
+  .container .throw-shuriken {
+    height: 200px;
+    width: 200px;
+    position: absolute; }
