@@ -25,17 +25,22 @@
         <h2 class="heading-secondary">Professional League</h2>
       </div>
       <div class="copy">
-        <a href="#" target="_blank" rel="noreferrer">Tutorial to make this</a>
+        <a
+          href="https://www.youtube.com/watch?v=e1NTcKAq4_I"
+          target="_blank"
+          rel="noreferrer"
+          >Tutorial to make this</a
+        >
         <p>&copy; Ruben Verster 2021</p>
       </div>
     </div>
     <script defer>
-      let container = document.querySelector('.container');
+      let container = document.querySelector(".container");
       let windowWidth = window.innerWidth;
       let windowHeight = window.innerHeight;
 
       //creates a style attribute for the element and adds the animation to it
-      const keyFrames = document.createElement('style');
+      const keyFrames = document.createElement("style");
       keyFrames.innerHTML = `
 @keyframes throw-shuriken {
   0% {
@@ -81,9 +86,9 @@
       //accepts the value for deciding which element to throw
       const kunaiOrShuriken = (decider) => {
         if (decider === 1) {
-          return 'kunai';
+          return "kunai";
         } else {
-          return 'shuriken';
+          return "shuriken";
         }
       };
 
@@ -91,18 +96,18 @@
       const renderShuriken = () => {
         let decider = Math.floor(Math.random() * 2);
 
-        shuriken = document.createElement('img');
+        shuriken = document.createElement("img");
         shuriken.src = `./img/${kunaiOrShuriken(decider)}-picture.png`;
-        shuriken.className = 'throw-shuriken';
+        shuriken.className = "throw-shuriken";
         shuriken.style.top = `${renderRandHeight()}px`;
-        shuriken.style.animation = 'throw-shuriken forwards 0.9s';
+        shuriken.style.animation = "throw-shuriken forwards 0.9s";
         container.appendChild(shuriken);
       };
 
-      container.addEventListener('click', () => renderShuriken());
+      container.addEventListener("click", () => renderShuriken());
 
       const cleanupWeapons = () => {
-        let mess = document.getElementsByClassName('throw-shuriken');
+        let mess = document.getElementsByClassName("throw-shuriken");
         if (mess.length < 5) {
           return;
         } else {
